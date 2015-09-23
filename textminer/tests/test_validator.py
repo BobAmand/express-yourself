@@ -4,7 +4,7 @@ xfail = pytest.mark.xfail
 import textminer.validator as v
 
 
-@xfail
+
 def test_binary_numbers():
     assert v.binary("0")
     assert v.binary("1")
@@ -34,7 +34,6 @@ def test_hexadecimal():
     assert not v.hex("COFFEE")
 
 
-@xfail
 def test_word():
     assert v.word("hello")
     assert v.word("wonderful")

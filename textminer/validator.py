@@ -1,4 +1,4 @@
-import pytest
+
 
 '''
 The Iron Works - Exercise 14 express-yourself
@@ -9,6 +9,28 @@ The Iron Works - Exercise 14 express-yourself
    * validator  [current file]
 
 '''
-def binary_numbers():
-    binary_set = re.compile("xxxx"))
-    if 
+import pytest
+import re
+
+def binary(inp):      # Glenn Hurley guidance:
+    match = re.search(r'([0-1]+)', inp)
+    # if not inp is testing if string is empty
+    if not inp or inp != match.groups()[0]:
+        return False
+    return True
+
+
+def word(text):       # Expecting 4 assert pass, 3 not assert pass.
+    return re.findall(r'([a-z]{4,10})[^!+][^*]',text)
+    # match = re.search(r'([a-z]{4,10})[^!+][^*]', text)
+    # if match:
+    #     return True
+    # else:
+    #     return False
+
+
+def words(text):       # Expecting
+    if re.match(r'(([a-z]{4,10})[^!+][^*])', text):
+        return True
+    else:
+        return False
